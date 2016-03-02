@@ -1,0 +1,32 @@
+#		SAMPLE PARAMETER FILE
+#		lines that begin with # are commented out
+#		
+#		outputfile is common to all lens models
+#		so are zlens and zsource at the moment
+
+
+outputfile         test_new_concave      # will contain the image magnifications
+
+
+deflection_off          false
+field_Nplanes           20          # # number of lens planes
+field_fov               1.0e4       # # field of view in square arcseconds
+
+field_input_simulation_path ../MillenniumData/wmap1_bc03_001_halos_extrawide.csv
+#field_input_simulation_path ../MillenniumData/bigsim_halos.csv
+field_input_simulation_format  MillenniumObs
+
+field_internal_profile  1       
+field_internal_profile_galaxy NSIE       # # if set, a galaxy profile is chosen: 1 or NSIE , omit for no field galaxies
+field_internal_profile_galaxy_slope 1
+field_off               false
+main_halo_on            false       # # 0: no main halo, 1 or else - a main halo
+source_band             SDSS_I      # # band that sources are observed in
+
+#source_input_galaxy_file ../MillenniumData/wmap1_bc03_001_extrawide.csv
+#source_input_galaxy_file ../MillenniumData/bigsim_galaxies.csv
+
+source_mag_limit        26          # # magnitude limit for galaxy sources
+source_sb_limit         30          # # surface brightness cuttoff for galaxies
+z_source                3.00        # # source redshift
+
